@@ -1,0 +1,26 @@
+<p>reactive-form works!</p>
+<form>
+    name: <input [formControl]="name"><br>
+    phone: <input [formControl]="phone"><br>
+    <button type="button" (click)="addLead()">Insert</button>
+</form>
+
+<table id="table" border="1">
+    <tr>
+        <th>name</th>
+        <th>phone</th>
+    </tr>
+    <tr *ngFor="let l of newLeads">
+        <th>{{l.name}}</th>
+        <th>{{l.phone}}</th>
+    </tr>
+</table>
+
+<hr>
+
+<div>
+    <p>ngModel replacement</p>
+    input: <input [formControl]="insert"><br>
+    <button type="button" (click)="setDefualt()">Set from ts</button><br>
+    <p>output: {{insert.value}}</p>
+</div>

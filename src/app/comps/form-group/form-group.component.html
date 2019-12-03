@@ -1,0 +1,12 @@
+<p>form-group works!</p>
+
+
+<form formGroup="myForm"
+    (ngSubmit)="formOnSubmit()">
+
+    <label>subject: </label><input formControlName="subject"><br>
+    <label>content: </label><input formControlName="content"><br>
+    <label>name: </label><input formControlName="name"><br>
+    <label>helpfull: </label><input type="checkbox" formControlName="helpfullk"><br>
+    <button>Submit</button>
+</form>
